@@ -1,22 +1,35 @@
-import React from "react"
 import { Link } from "gatsby"
-
+import React, { useState, useEffect } from "react";
+import UserPage from "./UserPage";
+import { Grommet, Main } from "grommet";
+import theme from "../theme";
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+function IndexPage() {
+  const [user, setUser] = useState(null);
 
-export default IndexPage
+  useEffect(() => {
+    fetch('https://gitconnected.com/v1/portfolio/celentanoad')
+      .then(res => res.json())
+      .then(user => {
+        setUser(user);
+      });
+  }, []);
+
+  if (!user) return <div />;
+
+  return (
+    <Layout>
+    <SEO title="Home" />
+    <Grommet theme={theme} full>
+      <Main background="light-3">
+        <UserPage user={user} />
+      </Main>
+    </Grommet>
+    <Link to="/page-2/">Go to page 2</Link> <br />
+    </Layout>
+  )
+}
+
+export default IndexPage;
