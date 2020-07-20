@@ -3,22 +3,23 @@ import {
   Text,
   Heading
 } from "grommet";
-
+import { Link } from "gatsby"
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import PageHeader from '../components/header';
-import PageFooter from '../components/Footer';
 import './UserPage.css';
 
-const UserPage = ({user}) => (
+const UserPage = ({user}, {toggleDarkMode}) => (
     <div className="main">
-      <Heading color="accent-2" id="about"> My Story </Heading>
-        <Text>
-            {user.basics.summary}
-        </Text>
-      <Heading color="accent-2"> Skills </Heading>
+      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      <br></br>
+      <Heading color="brand" level="1" id="about"> My Story </Heading>
+      <Text>{user.basics.summary}</Text> <br/><br/>
+      <Link to="/resume/" color="accent">View Resume</Link> <br />
+      <br></br>
+      <br></br>
+      <Heading color="brand"> Skills </Heading>
       <Skills />
-      <Heading color="accent-2" id="projects"> Projects </Heading>
+      <Heading color="brand" id="projects"> Projects </Heading>
       <Projects />
     </div>
 );

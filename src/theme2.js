@@ -10,7 +10,7 @@ const theme = {
           "5": "6",
           "6": "6",
           "dark": "#f8f8f8",
-          "light": "#666666"
+          "light": "#000000"
         },
         "active": "rgba(221,221,221,0.5)",
         "black": "#000000",
@@ -18,12 +18,12 @@ const theme = {
           "dark": "rgba(255,255,255,0.33)",
           "light": "rgba(0,0,0,0.33)"
         },
-        "brand": "#0096D6",
+        "brand": "#01a982",
         "control": {
-          "dark": "#00A8F0",
-          "light": "#0096D6"
+          "dark": "accent-1",
+          "light": "brand"
         },
-        "focus": "#99d5ef",
+        "focus": "#2AD2C9",
         "placeholder": "#AAAAAA",
         "selected": "brand",
         "text": {
@@ -31,33 +31,32 @@ const theme = {
           "light": "#444444"
         },
         "white": "#FFFFFF",
-        "accent-1": "#E6734B",
-        "accent-2": "#E6C84B",
-        "accent-3": "#915591",
+        "accent-1": "#2AD2C9",
+        "accent-2": "#614767",
+        "accent-3": "#ff8d6d",
         "accent-4": "#FFCA58",
-        "dark-1": "#000001",
-        "dark-2": "#676767",
+        "dark-1": "#333333",
+        "dark-2": "#555555",
         "dark-3": "#777777",
         "dark-4": "#999999",
         "dark-5": "#999999",
         "dark-6": "#999999",
-        "light-1": "#F2F2F2",
-        "light-2": "#E8E8E8",
-        "light-3": "#CCCCCC",
+        "light-1": "#F8F8F8",
+        "light-2": "#F2F2F2",
+        "light-3": "#EDEDED",
         "light-4": "#DADADA",
         "light-5": "#DADADA",
         "light-6": "#DADADA",
-        "neutral-1": "#006996",
-        "neutral-2": "#A65336",
-        "neutral-3": "#A69136",
-        "neutral-4": "#774677",
-        "status-critical": "#F04B37",
-        "status-error": "#FF4040",
-        "status-warning": "#F0AA3C",
-        "status-ok": "#509137",
-        "status-unknown": "#848484",
-        "status-disabled": "#848484",
-        "background": "#ffffff"
+        "neutral-1": "#425563",
+        "neutral-2": "#5F7A76",
+        "neutral-3": "#80746E",
+        "neutral-4": "#767676",
+        "status-critical": "#F04953",
+        "status-error": "#F04953",
+        "status-warning": "#FFD144",
+        "status-ok": "#01a982",
+        "status-unknown": "#CCCCCC",
+        "status-disabled": "#CCCCCC"
       },
       "animation": {
         "duration": "1s",
@@ -167,8 +166,8 @@ const theme = {
         "size": "18px",
         "height": "24px",
         "maxWidth": "432px",
-        "family": "'HPSimplified', Arial, sans-serif",
-        "face": "\n        @font-face {\n          font-family: 'HPSimplified';\n          src:\n            local('HPSimplified'),\n            url(\"https://hpincfonts.s3.amazonaws.com/hps-me-w27-regular-woff.woff\") format('woff');\n        }\n      "
+        "family": "'Metric', Arial, sans-serif",
+        "face": "\n        @font-face {\n          font-family: \"Metric\";\n          src: url(\"https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Regular.woff\") format('woff');\n        }\n\n        @font-face {\n          font-family: \"Metric\";\n          src: url(\"https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Bold.woff\") format('woff');\n          font-weight: 700;\n        }\n\n        @font-face {\n          font-family: \"Metric\";\n          src: url(\"https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Semibold.woff\") format('woff');\n          font-weight: 600;\n        }\n\n        @font-face {\n          font-family: \"Metric\";\n          src: url(\"https://hpefonts.s3.amazonaws.com/web/MetricHPE-Web-Light.woff\") format('woff');\n          font-weight: 100;\n        }\n      "
       },
       "hover": {
         "background": {
@@ -217,17 +216,34 @@ const theme = {
         "medium": "24px",
         "large": "48px",
         "xlarge": "96px"
+      },
+      "colors": {
+        "brand": "#01a982",
+        "focus": "#2AD2C9",
+        "accent-1": "#2AD2C9",
+        "accent-2": "#614767",
+        "accent-3": "#ff8d6d",
+        "neutral-1": "#425563",
+        "neutral-2": "#5F7A76",
+        "neutral-3": "#80746E",
+        "neutral-4": "#767676",
+        "status-critical": "#F04953",
+        "status-error": "#F04953",
+        "status-warning": "#FFD144",
+        "status-ok": "#01a982",
+        "status-unknown": "#CCCCCC",
+        "status-disabled": "#CCCCCC"
       }
     },
     "accordion": {
       "icons": {}
     },
     "anchor": {
-      "textDecoration": "none",
+      "textDecoration": "underline",
       "fontWeight": 600,
       "color": {
-        "dark": "#00A8F0",
-        "light": "#2883d7"
+        "dark": "#FFFFFF",
+        "light": "#000000"
       },
       "hover": {
         "textDecoration": "underline"
@@ -239,7 +255,7 @@ const theme = {
     "button": {
       "border": {
         "width": "2px",
-        "radius": "18px"
+        "radius": "0px"
       },
       "primary": {},
       "disabled": {
@@ -251,11 +267,11 @@ const theme = {
         "vertical": "4px",
         "horizontal": "22px"
       },
-      "extend": [
-        "\n      ",
-        null,
-        "\n    "
-      ]
+      "colors": {
+        "accent": "#ff8d6d",
+        "secondary": "rgba(51,51,51,0.6)"
+      },
+      "extend": "letter-spacing: 0.04167em;"
     },
     "calendar": {
       "small": {
@@ -347,8 +363,8 @@ const theme = {
         },
         "second": {
           "color": {
-            "dark": "accent-1",
-            "light": "accent-1"
+            "dark": "#01a982",
+            "light": "#01a982"
           },
           "width": "3px",
           "size": "9px",

@@ -6,8 +6,8 @@ import theme from '../theme';
 
 const PageFooter = () => (
   <Grommet theme={theme}>
-    <Main elevation="large" pad="medium" gap="small" background="dark-1">
-      <Heading color="accent-1" margin="none">Contact</Heading>
+    <Main elevation="large" pad="medium" gap="small">
+      <Heading color="accent-1" margin="none" level="2">Contact</Heading>
       <Grid 
         columns={{
           count: 3,
@@ -34,7 +34,7 @@ const PageFooter = () => (
       </Grid>
  
       <Box flex />
-    <Footer justify="center" pad="small">
+    <Footer justify="center" pad="small" level>
       <Text textAlign="center" size="small">
         © Alanna Celentano, 2020
       </Text>

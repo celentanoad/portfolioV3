@@ -10,7 +10,7 @@ import {
   Heading
 } from "grommet";
 import { HashLink as Link } from 'react-router-hash-link';
-import theme from '../theme';
+// import theme from '../theme';
 
 const sections = [
   { name: "About", path: '/about' },
@@ -19,13 +19,11 @@ const sections = [
 ];
 
 const PageHeader = () => {
-  
-  
   return (
-    <Grommet theme={theme}>
-    <Header background="dark-1" pad="small">
+    <>
+    <Header pad="small">
       <Box direction="row" align="center" gap="small">
-        <Heading color="accent-1" level="2">Alanna Celentano</Heading>
+        <Heading color="accent" level="2" margin="small">Alanna Celentano</Heading>
       </Box>
       <ResponsiveContext.Consumer>
         {responsive =>
@@ -46,15 +44,16 @@ const PageHeader = () => {
             />
           ) : (
             <Nav direction="row">
-              <Anchor href="#about" label="About" />
-              <Anchor href="#projects" label="Projects" />
-              <Anchor href="#contact" label="Contact" />
+              <Anchor href="#about" label="About" color="accent"/>
+              <Anchor href="#projects" label="Projects" color="accent" />
+              <Anchor href="#contact" label="Contact" color="accent"/>
             </Nav>
           )
         }
       </ResponsiveContext.Consumer>
     </Header>
-  </Grommet>
+    <hr></hr>
+  </>
   );
 };
  
