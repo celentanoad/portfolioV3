@@ -8,9 +8,9 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import './UserPage.css';
 
-const UserPage = ({user}, {toggleDarkMode}) => (
+const UserPage = ({user}) => (
     <div className="main">
-      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+     
       <br></br>
       <Heading color="brand" level="1" id="about"> My Story </Heading>
       <Text>{user.basics.summary}</Text> <br/><br/>

@@ -3,12 +3,14 @@ import {
   Anchor,
   Box,
   Grommet,
+  Text,
   Header,
   Nav,
   Menu,
   ResponsiveContext,
   Heading
 } from "grommet";
+import { FormDown } from 'grommet-icons';
 import { HashLink as Link } from 'react-router-hash-link';
 // import theme from '../theme';
 
@@ -21,32 +23,48 @@ const sections = [
 const PageHeader = () => {
   return (
     <>
-    <Header pad="small">
+    <Header pad="small" background="accent">
       <Box direction="row" align="center" gap="small">
-        <Heading color="accent" level="2" margin="small">Alanna Celentano</Heading>
+        <Heading color="text" level="2" margin="small">Alanna Celentano</Heading>
       </Box>
       <ResponsiveContext.Consumer>
         {responsive =>
           responsive === "small" ? (
             <Menu
-              label="Menu"
-              items={[
-                { label: "About", onClick: () => {
-                  document.getElementById("about").scrollIntoView()
-                } },
-                { label: "Projects", onClick: () => {
-                  document.getElementById("projects").scrollIntoView()
-                } },
-                { label: "Contact", onClick: () => {
-                  document.getElementById("contact").scrollIntoView()
-                } }
-              ]}
-            />
-          ) : (
+            plain
+            items={[
+              { label: "About", onClick: () => {
+                document.getElementById("about").scrollIntoView()
+              } },
+              { label: "Projects", onClick: () => {
+                document.getElementById("projects").scrollIntoView()
+              } },
+              { label: "Contact", onClick: () => {
+                document.getElementById("contact").scrollIntoView()
+              } }
+            ]}
+          >
+            {({ drop, hover }) => {
+              const color = hover && !drop ? 'background' : undefined;
+              return (
+                <Box
+                  direction="row"
+                  gap="small"
+                  pad="small"
+                  background={hover && drop ? 'light-2' : undefined}
+                >
+                  <Text color={color}>actions</Text>
+                  <FormDown color={color} />
+                </Box>
+              );
+            }}
+          </Menu>
+          ) 
+          : (
             <Nav direction="row">
-              <Anchor href="#about" label="About" color="accent"/>
-              <Anchor href="#projects" label="Projects" color="accent" />
-              <Anchor href="#contact" label="Contact" color="accent"/>
+              <Anchor href="#about" label="About" color="text"/>
+              <Anchor href="#projects" label="Projects" color="text" />
+              <Anchor href="#contact" label="Contact" color="text"/>
             </Nav>
           )
         }

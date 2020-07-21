@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 function IndexPage() {
   const [user, setUser] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch('https://gitconnected.com/v1/portfolio/celentanoad')
@@ -17,10 +17,10 @@ function IndexPage() {
       });
   }, []);
 
-  const toggleDarkMode = () => {
-    if (darkMode) setDarkMode(false);
-    else if (!darkMode) setDarkMode(true);
-  }
+  // const toggleDarkMode = () => {
+  //   if (darkMode) setDarkMode(false);
+  //   else if (!darkMode) setDarkMode(true);
+  // }
 
   if (!user) return <div />;
 
@@ -28,7 +28,7 @@ function IndexPage() {
     <Grommet theme={theme} themeMode="dark" full>
       <Layout>
       <SEO title="Home" />
-        <UserPage user={user} toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
+        <UserPage user={user} />
       </Layout>
     </Grommet>
   )
