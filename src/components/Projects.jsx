@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionPanel, Anchor, Image, Box, Text, Grommet } from 'grommet';
-import theme from '../theme';
+import theme from '../portfolioTheme';
 import threes from '../images/threes.png';
 import steamCollector from '../images/steam-collector.png';
 import bestBarcade from '../images/best-barcade.png';

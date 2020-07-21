@@ -61,7 +61,7 @@ const theme = {
           "dark": "#871000",
           "light": "#FFB202"
         },
-        "accent!": ""
+        "accent!": "#FFB202"
       },
       "font": {
         "family": "\"Roboto Slab\"",

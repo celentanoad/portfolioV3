@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserPage from "./UserPage";
-import { Grommet, Main } from "grommet";
+import { Grommet, Main, Box } from "grommet";
 import theme from "../portfolioTheme";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -26,10 +26,12 @@ function IndexPage() {
 
   return (
     <Grommet theme={theme} themeMode="dark" full>
-      <Layout>
-      <SEO title="Home" />
-        <UserPage user={user} />
-      </Layout>
+      <Box background="background-contrast">
+        <Layout>
+          <SEO title="Home" />
+          <UserPage user={user} />
+        </Layout>
+      </Box>
     </Grommet>
   )
 }
