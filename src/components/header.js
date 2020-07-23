@@ -2,7 +2,6 @@ import React from "react";
 import {
   Anchor,
   Box,
-  Grommet,
   Text,
   Header,
   Nav,
@@ -11,8 +10,6 @@ import {
   Heading
 } from "grommet";
 import { FormDown } from 'grommet-icons';
-import { HashLink as Link } from 'react-router-hash-link';
-// import theme from '../theme';
 
 const sections = [
   { name: "About", path: '/about' },
