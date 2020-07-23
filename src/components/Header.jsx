@@ -17,7 +17,7 @@ const sections = [
   { name: "Contact", path: '/contact' }
 ];
 
-const PageHeader = () => {
+const Header = () => {
   return (
     <>
     <Header pad="small" background="accent">
@@ -72,4 +72,4 @@ const PageHeader = () => {
   );
 };
  
-export default PageHeader;
+export default Header;

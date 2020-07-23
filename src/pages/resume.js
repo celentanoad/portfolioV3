@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const Resume = () => (
   <Layout>
     <SEO title="Resume" />
     <h1>Resume</h1>
@@ -13,4 +13,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Resume;

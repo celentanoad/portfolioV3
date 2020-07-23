@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserPage from "./UserPage";
 import { Grommet, Box, Button } from "grommet";
 import theme from "../portfolioTheme";
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 function IndexPage() {
