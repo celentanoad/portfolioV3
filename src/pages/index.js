@@ -31,7 +31,11 @@ function IndexPage() {
         <Layout>
           <SEO title="Home" />
           <Button label="Toggle Dark Mode" onClick={toggleDarkMode}></Button>
+          {user ?
           <UserPage user={user} />
+          :
+          <></>
+          }
         </Layout>
       </Box>
     </Grommet>

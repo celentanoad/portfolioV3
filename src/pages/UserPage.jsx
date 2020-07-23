@@ -36,7 +36,6 @@ const UserPage = ({user}) => (
       <br></br>
       <Heading color="accent2" id="projects" textAlign="center"> Projects </Heading>
       <Projects user={user}/>
-
       </>
 );
  
