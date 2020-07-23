@@ -18,7 +18,7 @@ const theme = {
       "colors": {
         "brand": {
           "dark": "#025A6F",
-          "light": "#036F88 "
+          "light": "#036F88"
         },
         "background": {
           "dark": "#111111",

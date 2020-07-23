@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Text,
   Heading,
-  Box
+  Box,
+  Anchor
 } from "grommet";
 import { Link } from "gatsby"
 import Projects from '../components/Projects';
@@ -22,7 +23,8 @@ const UserPage = ({user}) => (
           width="small"
           >
             <Box background="#EEEEEE" round pad="small" align="center">
-              <Link to="/resume/"> View Resume </Link>
+              <Anchor href="https://drive.google.com/file/d/1u-WdGqTeEOXO6CopKwLVCnnA1rh_nm9E/view" target="_blank">View Resume</Anchor>
+              {/* <Link to="/resume/"> View Resume </Link> */}
             </Box>
         </Box>
       </div>
