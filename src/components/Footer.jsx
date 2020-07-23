@@ -1,13 +1,10 @@
 import React from 'react';
-
-import { Box, Footer, Grommet, Image, Main, Text, Anchor, Heading, Grid } from 'grommet';
-import theme from '../theme';
+import { Box, Footer, Image, Main, Text, Anchor, Heading, Grid } from 'grommet';
 
 
 const PageFooter = () => (
-  <Grommet theme={theme}>
-    <Main elevation="large" pad="medium" gap="small">
-      <Heading color="accent-1" margin="none" level="2">Contact</Heading>
+    <Main elevation="large" pad="medium" gap="small" align="center" background="border">
+      <Heading color="text" margin="none" level="2" alignSelf="center" id="contact">Contact</Heading>
       <Grid 
         columns={{
           count: 3,
@@ -15,17 +12,17 @@ const PageFooter = () => (
         }}
         gap="small"
       >
-        <Box textAlign="center">
+        <Box align="center">
           Github
           <Anchor href="https://github.com/celentanoad">
           <Image src="https://i.imgur.com/kO7lRkL.png" alt="GitHub" width="25px" />
           </Anchor>
         </Box>
-        <Box>
+        <Box align="center">
           Email
-          <Anchor href="mailto:celentanoad91@gmail.com">celentanoad91@gmail.com</Anchor>
+          <Anchor href="mailto:celentanoad91@gmail.com" color="accent2">celentanoad91@gmail.com</Anchor>
         </Box>
-        <Box>
+        <Box align="center">
           LinkedIn
           <Anchor href="https://www.linkedin.com/in/alanna-celentano">
           <Image src="https://i.imgur.com/DZfppKt.png" alt="LinkedIn" width="25px" />
@@ -40,7 +37,6 @@ const PageFooter = () => (
       </Text>
     </Footer>
     </Main>
-  </Grommet>
 );
 
 export default PageFooter;

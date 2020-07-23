@@ -12,24 +12,29 @@ import './UserPage.css';
 const UserPage = ({user}) => (
       <>
       <br></br>
-      <Heading color="accent!" level="1" id="about"> My Story </Heading>
-      <Text>{user.basics.summary}</Text> <br/><br/>
-      <Box 
-        pad="xsmall"
-        background="brand"
-        round
-        width="small"
-        >
-        <Box background="text" round pad="small" align="center">
-          <Link to="/resume/"> View Resume </Link>
+      <Heading color="accent2" level="1" id="about" textAlign="center"> My Story </Heading>
+      <Text textAlign="center">{user.basics.summary}</Text> <br/><br/>
+      <div align="center">
+        <Box 
+          pad="xsmall"
+          background="brand"
+          round
+          width="small"
+          >
+            <Box background="#EEEEEE" round pad="small" align="center">
+              <Link to="/resume/"> View Resume </Link>
+            </Box>
         </Box>
-      </Box>
+      </div>
       <br></br>
       <br></br>
-      <Heading color="accent!"> Skills </Heading>
-      <Skills />
-      <Heading color="accent!" id="projects"> Projects </Heading>
-      <Projects />
+      <Heading color="accent2" textAlign="center"> Skills </Heading>
+      <Skills user={user} />
+      <br></br>
+      <br></br>
+      <Heading color="accent2" id="projects" textAlign="center"> Projects </Heading>
+      <Projects user={user}/>
+
       </>
 );
  
