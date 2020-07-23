@@ -50,7 +50,7 @@ const PageHeader = () => {
                   pad="small"
                   background={hover && drop ? 'light-2' : undefined}
                 >
-                  <Text color={color}>actions</Text>
+                  <Text color={color}>Menu</Text>
                   <FormDown color={color} />
                 </Box>
               );
