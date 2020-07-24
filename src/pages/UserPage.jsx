@@ -10,7 +10,9 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import './UserPage.css';
 
-const UserPage = ({user}) => (
+function UserPage ({user}) {
+  if (!user) return <div />;
+  return (
       <>
       <br></br>
       <Heading color="accent2" level="1" id="about" textAlign="center"> My Story </Heading>
@@ -36,7 +38,9 @@ const UserPage = ({user}) => (
       <br></br>
       <Heading color="accent2" id="projects" textAlign="center"> Projects </Heading>
       <Projects user={user}/>
-      </>
-);
+    </>
+      
+  );
+}
  
 export default UserPage;

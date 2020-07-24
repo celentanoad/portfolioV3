@@ -8,7 +8,7 @@ import SEO from "../components/seo";
 
 
 function IndexPage() {
-  const [user, setUser] = useState("default");
+  const [user, setUser] = useState(null);
   const [darkMode, setDarkMode] = useState("dark");
 
   useEffect(() => {
@@ -33,11 +33,7 @@ function IndexPage() {
         <Layout>
           <SEO title="Home" />
           <Button label="Toggle Dark Mode" onClick={toggleDarkMode}></Button>
-          {user ?
           <UserPage user={user} />
-          :
-          <></>
-          }
         </Layout>
       </Box>
     </Grommet>
