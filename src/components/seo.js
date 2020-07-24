@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image, imageAlt }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,7 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            defaultImage: image
+            image
+            imageAlt
           }
         }
       }
@@ -28,6 +29,14 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
+  const seo = {
+    title: title,
+    description: description,
+    image: `https://i.imgur.com/tU6UT9u.png`,
+    url: `https://www.alannacelentano.com`,
+    imageAlt,
+  };
+
   return (
     <Helmet
       htmlAttributes={{
@@ -35,45 +44,58 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:image`,
-          content: "https://i.imgur.com/tU6UT9u.png"
-        }
-      ].concat(meta)}
-    />
+      defer={false}
+      >
+        {seo.url && <meta property="og:url" content={seo.url} />}
+        {(
+        <meta property="og:type" content="website" />
+        )}
+        {seo.title && <meta property="og:title" content={seo.title} />}
+        {seo.description && (
+          <meta property="og:description" content={seo.description} />
+        )}
+        {seo.image && <meta property="og:image" content={seo.image} />}
+        {seo.imageAlt && <meta property="og:image:alt" content={seo.imageAlt} />}
+      </Helmet>
+  //     meta={[
+  //       {
+  //         name: `description`,
+  //         content: metaDescription,
+  //       },
+  //       {
+  //         property: `og:title`,
+  //         content: title,
+  //       },
+  //       {
+  //         property: `og:description`,
+  //         content: metaDescription,
+  //       },
+  //       {
+  //         property: `og:type`,
+  //         content: `website`,
+  //       },
+  //       {
+  //         name: `twitter:card`,
+  //         content: `summary`,
+  //       },
+  //       {
+  //         name: `twitter:creator`,
+  //         content: site.siteMetadata.author,
+  //       },
+  //       {
+  //         name: `twitter:title`,
+  //         content: title,
+  //       },
+  //       {
+  //         name: `twitter:description`,
+  //         content: metaDescription,
+  //       },
+  //       {
+  //         property: `og:image`,
+  //         content: "https://i.imgur.com/tU6UT9u.png"
+  //       }
+  //     ].concat(meta)}
+  //   />
   )
 }
 
