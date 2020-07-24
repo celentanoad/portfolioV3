@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Footer, Image, Main, Text, Anchor, Heading, Grid } from 'grommet';
+import { MailOption } from 'grommet-icons';
 
 
 const PageFooter = () => (
@@ -20,7 +21,7 @@ const PageFooter = () => (
         </Box>
         <Box align="center">
           Email
-          <Anchor href="mailto:celentanoad91@gmail.com" color="accent2">celentanoad91@gmail.com</Anchor>
+          <Anchor href="mailto:celentanoad91@gmail.com" color="accent2"><MailOption /></Anchor>
         </Box>
         <Box align="center">
           LinkedIn
@@ -29,7 +30,7 @@ const PageFooter = () => (
           </Anchor>
         </Box>
       </Grid>
- 
+        <Anchor color="accent2" href="mailto:celentanoad91@gmail.com">celentanoad91@gmail.com</Anchor>
       <Box flex />
     <Footer justify="center" pad="small" level>
       <Text textAlign="center" size="small">
