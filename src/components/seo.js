@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
   const seo = {
     title: title,
     description: description,
-    image: `https://i.imgur.com/d2iocSd.png`,
+    image: `https://i.imgur.com/XkF5ugg.png`,
     url: `https://www.alannacelentano.com`,
     imageAlt,
   };

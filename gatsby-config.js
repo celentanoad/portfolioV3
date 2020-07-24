@@ -4,7 +4,7 @@ module.exports = {
     description: `Software Developer located in Austin, TX`,
     author: `Alanna Celentano`,
     keywords: `Alanna Celentano, portfolio, web developer, software engineer, technology`,
-    image: `https://i.imgur.com/d2iocSd.png`,
+    image: `https://i.imgur.com/XkF5ugg.png`,
     imageAlt: `Alanna Celentano: Software Developer, Problem Solver, Innovator`
   },
   plugins: [
