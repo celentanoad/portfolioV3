@@ -18,7 +18,6 @@ function IndexPage() {
         setUser(user);
       });
   }, []);
-
   
   const toggleDarkMode = () => {
     if (darkMode === "dark") setDarkMode("light");

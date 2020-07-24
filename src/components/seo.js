@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
 function SEO({ description, lang, meta, title, image, imageAlt }) {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      query SEO {
         site {
           siteMetadata {
             title
@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
   const seo = {
     title: title,
     description: description,
-    image: `https://i.imgur.com/tU6UT9u.png`,
+    image: `https://i.imgur.com/N4egWjt.png`,
     url: `https://www.alannacelentano.com`,
     imageAlt,
   };
