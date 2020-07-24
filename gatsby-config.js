@@ -3,8 +3,8 @@ module.exports = {
     title: `Portfolio`,
     description: `Portfolio website`,
     author: `Alanna Celentano`,
-    keywords: `Alanna Celentano, portfolio, web developer, software engineer, technology`
-    
+    keywords: `Alanna Celentano, portfolio, web developer, software engineer, technology`,
+    image: `https://i.imgur.com/tU6UT9u.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
