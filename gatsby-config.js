@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Porfolio`,
-    description: `Porfolio website`,
+    title: `Portfolio`,
+    description: `Portfolio website`,
     author: `Alanna Celentano`,
+    keywords: `Alanna Celentano, portfolio, web developer, software engineer, technology`
+    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

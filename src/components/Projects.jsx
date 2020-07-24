@@ -20,7 +20,7 @@ const Projects = (props) => {
                   align="center" 
                   background={{ color: "brand", opacity: "strong" }}
                   >
-                <Text size="large" margin="small" color="text-strong"> MongoDB | Express | React | Node.js</Text>
+                <Text size="large" margin="small" color="text-strong" textAlign="center"> MongoDB | Express | React | Node.js</Text>
                 <Image src={steamCollector} alt="Steam Collector" fit="contain"/>
                 <div className="Styled">
                   <Anchor color="accent!" href="https://steam-collector.herokuapp.com/" margin="medium"><Deploy color="accent!"/></Anchor> 
@@ -37,7 +37,7 @@ const Projects = (props) => {
                   align="center" 
                   background={{ color: "brand", opacity: "strong" }}
                 >
-                <Text size="large" margin="small" color="text-strong"> Javascript | MongoDB | Node.js | OAuth </Text>
+                <Text size="large" margin="small" color="text-strong" textAlign="center"> Javascript | MongoDB | Node.js | OAuth </Text>
                 <Image src={hyruleStays2} alt="Hyrule Stays" fit="contain"/>
                 <div className="Styled">
                   <Anchor color="accent!" href={props.user.projects[1].website} margin="medium"><Deploy color="accent!"/></Anchor> 
@@ -54,7 +54,7 @@ const Projects = (props) => {
                   align="center" 
                   background={{ color: "brand", opacity: "strong" }}
                 >
-                <Text size="large" margin="small" color="text-strong"> Python | Django | Amazon Web Services | PostgreSQL</Text>
+                <Text size="large" margin="small" color="text-strong" textAlign="center"> Python | Django | Amazon Web Services | PostgreSQL</Text>
                 <Image src={bestBarcade} alt="The Best Barcade" fit="contain"/>
                 <div className="Styled">
                   <Anchor color="accent!" href="https://thebestbarcade.herokuapp.com/" margin="medium"><Deploy color="accent!"/></Anchor> 
@@ -71,7 +71,7 @@ const Projects = (props) => {
                   align="center" 
                   background={{ color: "brand", opacity: "strong" }}
                 >
-                <Text size="large" margin="small" color="text-strong"> Javascript | HTML | CSS </Text>
+                <Text size="large" margin="small" color="text-strong" textAlign="center"> Javascript | HTML | CSS </Text>
                 <Image src={threes} alt="Threes game" fit="contain"/>
                 <div className="Styled">
                   <Anchor color="accent!" href={props.user.projects[3].website} margin="medium"><Deploy color="accent!"/></Anchor> 
