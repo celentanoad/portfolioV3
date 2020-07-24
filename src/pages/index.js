@@ -5,8 +5,10 @@ import theme from "../portfolioTheme";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+
+
 function IndexPage() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("default");
   const [darkMode, setDarkMode] = useState("dark");
 
   useEffect(() => {
