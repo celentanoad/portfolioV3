@@ -63,6 +63,23 @@ const Projects = (props) => {
                 </Box>
               </Box>
             </AccordionPanel>
+            <AccordionPanel label="Hero Destroyer" background="text">
+              <Box background="brand" overflow="auto" height="medium">
+                <Box 
+                  height="medium" 
+                  flex={false} 
+                  align="center" 
+                  background={{ color: "brand", opacity: "strong" }}
+                >
+                <Text size="large" margin="small" color="text-strong" textAlign="center"> Javascript | HTML | CSS </Text>
+                <Image src="https://i.imgur.com/7ngVZ6C.png" alt="Hero Destroyer game" fit="contain"/>
+                <div className="Styled">
+                  <Anchor color="accent!" href="https://celentanoad.github.io/hero-destroyer/" margin="medium"><Deploy color="accent!"/></Anchor> 
+                  <Anchor color="accent!" href="https://github.com/celentanoad/hero-destroyer" margin="medium"><Code color="accent!" /></Anchor>
+                </div>
+                </Box>
+              </Box>
+            </AccordionPanel>
             <AccordionPanel label="Threes" background="text">
               <Box background="brand" overflow="auto" height="medium">
                 <Box 

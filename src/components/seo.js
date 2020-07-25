@@ -114,4 +114,4 @@ SEO.propTypes = {
   image: PropTypes.string
 }
 
-export default SEO
+export default SEO;
