@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
   const seo = {
     title: title,
     description: description,
-    image: `https://i.imgur.com/XkF5ugg.png`,
+    image: `https://i.imgur.com/mrressL.png`,
     url: `https://www.alannacelentano.com`,
     imageAlt,
   };
@@ -92,7 +92,7 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
   //       },
   //       {
   //         property: `og:image`,
-  //         content: "https://i.imgur.com/tU6UT9u.png"
+  //         content: "https://i.imgur.com/mrressL.png"
   //       }
   //     ].concat(meta)}
   //   />
