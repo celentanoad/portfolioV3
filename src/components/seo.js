@@ -45,8 +45,8 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       defer={false}
-      >
-        {seo.url && <meta property="og:url" content={seo.url} />}
+      // >
+        /* {seo.url && <meta property="og:url" content={seo.url} />}
         {(
         <meta property="og:type" content="website" />
         )}
@@ -56,46 +56,46 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
         )}
         {seo.image && <meta property="og:image" content={seo.image} />}
         {seo.imageAlt && <meta property="og:image:alt" content={seo.imageAlt} />}
-      </Helmet>
-  //     meta={[
-  //       {
-  //         name: `description`,
-  //         content: metaDescription,
-  //       },
-  //       {
-  //         property: `og:title`,
-  //         content: title,
-  //       },
-  //       {
-  //         property: `og:description`,
-  //         content: metaDescription,
-  //       },
-  //       {
-  //         property: `og:type`,
-  //         content: `website`,
-  //       },
-  //       {
-  //         name: `twitter:card`,
-  //         content: `summary`,
-  //       },
-  //       {
-  //         name: `twitter:creator`,
-  //         content: site.siteMetadata.author,
-  //       },
-  //       {
-  //         name: `twitter:title`,
-  //         content: title,
-  //       },
-  //       {
-  //         name: `twitter:description`,
-  //         content: metaDescription,
-  //       },
-  //       {
-  //         property: `og:image`,
-  //         content: "https://i.imgur.com/mrressL.png"
-  //       }
-  //     ].concat(meta)}
-  //   />
+      </Helmet> */
+       meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: "https://i.imgur.com/mrressL.png"
+        }
+      ].concat(meta)}
+    />
   )
 }
 
