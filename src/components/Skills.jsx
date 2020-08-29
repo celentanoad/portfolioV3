@@ -3,7 +3,7 @@ import { Box, Grid } from 'grommet';
 
 const Skills = (props) => {
     return ( 
-        <>
+        <div style={{maxWidth: 1000, margin: "auto"}}>
         <Grid columns="small" gap="small">
         {props.user ? 
         props.user.skills.map((skill) => {
@@ -15,7 +15,7 @@ const Skills = (props) => {
         <></>
         }
         </Grid>
-        </>
+        </div>
      );
 }
  

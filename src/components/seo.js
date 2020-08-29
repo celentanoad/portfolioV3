@@ -92,7 +92,7 @@ function SEO({ description, lang, meta, title, image, imageAlt }) {
         },
         {
           property: `og:image`,
-          content: "https://i.imgur.com/mrressL.png"
+          content: "https://i.imgur.com/vjquhAy.png"
         }
       ].concat(meta)}
     />

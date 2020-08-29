@@ -12,7 +12,7 @@ function IndexPage() {
   const [darkMode, setDarkMode] = useState("dark");
 
   useEffect(() => {
-    fetch('https://gitconnected.com/v1/portfolio/celentanoad')
+    fetch(`https://gitconnected.com/v1/portfolio/celentanoad`)
       .then(res => res.json())
       .then(user => {
         setUser(user);
