@@ -110,6 +110,27 @@ const theme = {
       "font": {
         "family": "\"Roboto Slab\""
       }
+    },
+    "carousel": {
+      "animation": {
+        "duration": "1000",
+      },
+      "icons": {
+        "color": 'black',
+      },
+      "disabled": {
+        "icons": {
+          "color": 'grey'
+        },
+      },
+    },
+    "accordion": {
+      "icons": {
+        "color": {
+          "dark": "#FFFFFF",
+          "light": "#000000"
+        }
+      }
     }
   }
 

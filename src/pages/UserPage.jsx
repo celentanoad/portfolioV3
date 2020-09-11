@@ -5,8 +5,8 @@ import {
   Box,
   Anchor
 } from "grommet";
-import { Link } from "gatsby"
-import Projects from '../components/Projects';
+import { Divider } from 'semantic-ui-react';
+import Project from '../components/Project';
 import Skills from '../components/Skills';
 import './UserPage.css';
 
@@ -16,6 +16,7 @@ function UserPage ({user}) {
       <>
       <br></br>
       <Heading color="accent2" level="1" id="about" textAlign="center"> My Story </Heading>
+      <Divider />
       <Text textAlign="center">{user.basics.summary}</Text> <br/><br/>
       <div align="center">
         <Box 
@@ -33,11 +34,14 @@ function UserPage ({user}) {
       <br></br>
       <br></br>
       <Heading color="accent2" textAlign="center"> Skills </Heading>
+      <Divider />
       <Skills user={user} />
       <br></br>
       <br></br>
       <Heading color="accent2" id="projects" textAlign="center"> Projects </Heading>
-      <Projects user={user}/>
+      {user.projects.map(project => {
+        return <Project project={project}/>
+      })}
     </>
       
   );
