@@ -20,11 +20,11 @@ const Project = (props) => {
             background={{ color: "brand", opacity: "strong" }}
           >
             {props.project.images.length < 2 ?
-              <Image src={props.project.images[0].resolutions.mobile.url} fit="contain" />
+              <Image src={props.project.images[0].resolutions.mobile.url} alt={props.project.displayName} fit="contain" />
             :
-            <Carousel controls={false} play={5000}>
+            <Carousel controls={false} play={5000} a11yTitle="Carousel of project images">
               {props.project.images.map(image => {
-                return <Image src={image.resolutions.mobile.url} fit="contain"/>
+                return <Image src={image.resolutions.mobile.url} alt={props.project.displayName} fit="contain"/>
               })}
             </Carousel>
             }
