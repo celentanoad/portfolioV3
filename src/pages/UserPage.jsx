@@ -26,7 +26,7 @@ function UserPage ({user}) {
           width="small"
           >
             <Box background="#EEEEEE" round pad="small" align="center">
-              <Anchor href="https://docs.google.com/document/d/e/2PACX-1vSUMAGBqxG3WP7PbfbYZCx59y1-c-FWErSJOyFHbpZQq4zQejY2LHT_IjV7iAqMi_WQpoEdKM-pzYS3/pub" target="_blank">View Resume</Anchor>
+              <Anchor href="https://docs.google.com/document/d/1HrXDHFm8Q0NbEfXLf1r2HSvjqtD1At1TgQUYoj6ECXg/edit?usp=sharing" target="_blank">View Resume</Anchor>
               {/* <Link to="/resume/"> View Resume </Link> */}
             </Box>
         </Box>
